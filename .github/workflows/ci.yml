@@ -25,7 +25,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Install dependencies
-        run: npm install
+      - name: Install node
+        run: |
+          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          sudo apt-get install -y nodejs
       - name: node version
         run: node --version
